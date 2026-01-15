@@ -1,0 +1,23 @@
+level01@SnowCrash:~$ find / -user flag01 -print 2>/dev/null | grep -v "/rofs/" | grep -v "/proc/" | xargs cat
+
+level01@SnowCrash:~$ find / -user flag01 -print 2>/dev/null | grep -v "/rofs/" | grep -v "/proc/"
+
+level01@SnowCrash:~$ whoami
+level01
+
+level01@SnowCrash:~$ id
+uid=2001(level01) gid=2001(level01) groups=2001(level01),100(users)
+
+level01@SnowCrash:~$ ls -la
+total 12
+dr-x------ 1 level01 level01  100 Mar  5  2016 .
+d--x--x--x 1 root    users    340 Aug 30  2015 ..
+-r-x------ 1 level01 level01  220 Apr  3  2012 .bash_logout
+-r-x------ 1 level01 level01 3518 Aug 30  2015 .bashrc
+-r-x------ 1 level01 level01  675 Apr  3  2012 .profile
+
+level01@SnowCrash:~$ find / -user flag01 -print 2>/dev/null
+
+level01@SnowCrash:~$ cat /etc/passwd | grep flag01
+flag01:42hDRfypTqqnw:3001:3001::/home/flag/flag01:/bin/bash
+
